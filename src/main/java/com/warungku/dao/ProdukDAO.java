@@ -76,7 +76,6 @@ public class ProdukDAO {
         p.setTersedia(rs.getBoolean("tersedia"));
         return p;
     }
-}
 
     // Cari produk berdasarkan kata kunci
     public List<Produk> cariProduk(String kata) {
@@ -98,3 +97,4 @@ public class ProdukDAO {
         }
         return list;
     }
+}
