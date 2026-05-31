@@ -102,7 +102,7 @@
         <%      count++; %>
             <div class="produk-card">
                 <div class="produk-img">
-                    <div class="img-placeholder">🛍️</div>
+                    <img src="images/<%= p.getGambar() %>" alt="<%= p.getNama() %>" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none'">
                 </div>
                 <div class="produk-detail">
                     <p class="produk-kategori"><%= p.getNamaKategori() %></p>

@@ -80,8 +80,15 @@
                         <c:forEach var="produk" items="${listProduk}">
                             <div class="produk-card">
                                 <div class="produk-img">
-                                    <div class="img-placeholder">🛍️</div>
-                                </div>
+    <c:choose>
+        <c:when test="${not empty produk.gambar}">
+            <img src="images/${produk.gambar}" alt="${produk.nama}" style="width:100%;height:100%;object-fit:cover;">
+        </c:when>
+        <c:otherwise>
+            <div class="img-placeholder">🛍️</div>
+        </c:otherwise>
+    </c:choose>
+</div>
                                 <div class="produk-detail">
                                     <p class="produk-kategori">${produk.namaKategori}</p>
                                     <h3>${produk.nama}</h3>
